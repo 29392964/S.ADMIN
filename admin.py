@@ -21,3 +21,8 @@ application = tornado.web.Application(
     static_path = os.path.join(os.path.dirname(__file__),'public'),
     debug = True
 )
+
+
+if __name__ == "__main__":
+    application.listen(8000)
+    tornado.ioloop.IOLoop.instance().start()
